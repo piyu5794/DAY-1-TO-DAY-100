@@ -4,7 +4,7 @@ public:
 
         vector<string> ans;
         int idx = 0;
-        for (int i = 1; i <= n && idx < target.size(); i++) {
+        for (int i = 1; i <= target.back(); i++) {
 
             ans.push_back("Push");
 
