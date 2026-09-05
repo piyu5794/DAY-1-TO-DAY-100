@@ -7,12 +7,13 @@ public:
             pq.push(x);
         }
 
-        while (k--) {
-            int x = pq.top();
+        while (k> 0) {
+            int x = pq.top() +1;
             pq.pop();
 
-            x -= x / 2;
+            x = x / 2;
             pq.push(x);
+            k--;
         }
 
         int ans = 0;
