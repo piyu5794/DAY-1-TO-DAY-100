@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int helper(int n, vector<int> &v){
+        if(n<3) return n;
+        if(v[n]!= -1) return v[n];
+        return v[n] =helper(n-1,v) +helper(n-2,v);
+    }
+    int climbStairs(int n) {
+        vector<int> v(n+1, -1);
+        return helper(n,v);
+    }
+};
