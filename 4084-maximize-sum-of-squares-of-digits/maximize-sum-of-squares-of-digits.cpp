@@ -4,9 +4,14 @@ public:
         if(sum > 9*num) return "";
         string ans ="";
         while(num >0){
-            int x =min(9, sum);
-            ans += to_string(x);
-            sum -=x;
+            if(sum >=9){
+                ans += to_string(9);
+                sum -=9;
+            }
+            else {
+                ans +=to_string(sum);
+                sum -=sum;
+            }
             num--;
         }
         return ans;
